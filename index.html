@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/waves.css" />
+    <link rel="stylesheet" href="styles/skills.css" />
+    <link rel="stylesheet" href="styles/cards.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/png" href="../assets/atom-no-border.png" />
+    <title>Antonin GOIX</title>
+  </head>
+  <body>
+    <div class="first-view">
+      <header class="header">
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+          <li><a href="#">Compétences</a></li>
+          <li><a href="#project">Projets</a></li>
+        </ul>
+      </header>
+      <section>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+      </section>
+      <img class="profile-pic" src="../assets/profil-image/profil.jpg" alt="profile picture" />
+      <div class="container-description">
+        <h1 class="name-profile">Antonin GOIX</h1>
+        <div class="hack">
+          <h1 class="typeWriter" data-checkVisible="true" data-speed="0.1" data-text='["Tech enthousiaste", "Développeur", "Étudiant"]'></h1>
+        </div>
+        <p class="intro">
+          Bienvenue, ici vous trouverez mes projets et mes compétences actuelles ! Pour me dontactez utilisez les liens en dessous:
+        </p>
+        <div class="contact">
+          <ul class="contact-ul">
+            <li class="contact-li">
+              <a href="https://www.linkedin.com/in/antonin-goix-560972180/" rel="noopener noreferrer" target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-linkedin" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li class="contact-li">
+              <a href="mailto:goix_a@etna-alternance.net">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-envelope" aria-hidden="true"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="second-view">
+      <div class="console">
+        <div class="console-bar">
+          <i class="fa fa-circle" aria-hidden="true" id="console1"></i><i class="fa fa-circle" aria-hidden="true" id="console2"></i
+          ><i class="fa fa-circle" aria-hidden="true" id="console3"></i>
+        </div>
+        <div class="console-path">
+          <div class="machine-name">anto@machine</div>
+          <div>:</div>
+          <div class="tild">~</div>
+          $ ./showMySkill/10
+        </div>
+        <p class="choose-cat">Choose a category:</p>
+        <p class="radio-group">
+          <label class="buzz-out"> <input type="radio" name="rotate-cube-side" value="front" checked /> softSkills </label>
+          <label class="buzz-out"> <input type="radio" name="rotate-cube-side" value="back" /> frontEnd </label>
+          <label class="buzz-out"> <input type="radio" name="rotate-cube-side" value="right" /> backEnd </label>
+          <label class="buzz-out"> <input type="radio" name="rotate-cube-side" value="left" /> misc </label>
+          <!-- <label> <input type="radio" name="rotate-cube-side" value="bottom" /> bottom </label> -->
+          <label class="buzz-out"> <input type="radio" name="rotate-cube-side" value="top" /> hobbies </label>
+        </p>
+        <div class="scene">
+          <div class="cube">
+            <div class="cube__face cube__face--front">
+              <div class="tab2"><span class="language">softSkills</span> = <span class="bracket1">{</span></div>
+              <div class="tab3">
+                teamwork: 7,<br />
+                relationships: 8, <br />
+                communication: 7,<br />
+                adaptability: 9,<br />
+                analysis: 8,<br />
+                openminded: 8,<br />
+                organization: 7,<br />
+                humor: 7,<br />
+                selfmotivation: 10,<br />
+                creativity: 9,<br />
+                curiosity: 9,<br />
+                learning: 10,<br />
+              </div>
+              <div class="tab2"><span class="bracket1">}</span></div>
+            </div>
+            <div class="cube__face cube__face--back">
+              <div class="tab2"><span class="language">frontEnd</span> = <span class="bracket1">{</span></div>
+              <div class="tab3">
+                react: 7,<br />
+                react-native: 8, <br />
+                hooks: 7, <br />
+                electronJS: 8, <br />
+                bulma: 6, <br />
+                bootstrap: 7, <br />
+                swiftUI: 5, <br />
+                swift: 6, <br />
+                java: 6, <br />
+                html: 7, <br />
+                css: 7,<br />
+                sass: 6,<br />
+              </div>
+              <div class="tab2"><span class="bracket1">}</span></div>
+            </div>
+            <div class="cube__face cube__face--right">
+              <div class="tab2"><span class="language">backEnd</span> = <span class="bracket1">{</span></div>
+              <div class="tab3">
+                nodeJS: 6,<br />
+                mongoDB: 7, <br />
+                expressJS: 6,<br />
+                mySql: 7,<br />
+                php: 6,<br />
+                laravel: 8,<br />
+              </div>
+              <div class="tab2"><span class="bracket1">}</span></div>
+            </div>
+            <div class="cube__face cube__face--left">
+              <div class="tab2"><span class="language">misc</span> = <span class="bracket1">{</span></div>
+              <div class="tab3">
+                typescript: 8, <br />
+                git: 8,<br />
+                wordpress: 5, <br />
+                c: 7, <br />
+                python: 6, <br />
+              </div>
+              <div class="tab2"><span class="bracket1">}</span></div>
+            </div>
+            <div class="cube__face cube__face--top">
+              <div class="tab2"><span class="language">misc</span> = <span class="bracket1">{</span></div>
+              <div class="tab3">
+                surf: 8, <br />
+                skate: 8,<br />
+                snowboard: 5, <br />
+                videogames: 8, <br />
+                friends: 8, <br />
+                technology: 6, <br />
+                blockchain: 6, <br />
+                music: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7, <br />
+              </div>
+              <div class="tab2"><span class="bracket1">}</span></div>
+            </div>
+            <div class="cube__face cube__face--bottom">bottom</div>
+          </div>
+        </div>
+        <div class="console-path">
+          <div class="machine-name">anto@machine</div>
+          <div>:</div>
+          <div class="tild">~</div>
+          $ <span class="blink">x</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <h3>Card 1</h3>
+          <p>Some text</p>
+          <p>Some text</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <h3>Card 2</h3>
+          <p>Some text</p>
+          <p>Some text</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <h3>Card 3</h3>
+          <p>Some text</p>
+          <p>Some text</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <h3>Card 4</h3>
+          <p>Some text</p>
+          <p>Some text</p>
+        </div>
+      </div>
+    </div>
+    <button onclick="topFunction()" id="topBtn"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typelighterjs/typelighter.min.js"></script>
+  </body>
+</html>
