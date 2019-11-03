@@ -24,7 +24,6 @@ a {
 
 .first-view {
   height: 100vh;
-  transition: 1s;
 }
 
 .profile-pic {
@@ -110,13 +109,38 @@ a {
 
 @media screen and (max-width: 768px) {
   .profile-pic {
-    margin: auto;
-    position: absolute;
+    z-index: 1008;
     border: 3px solid #fff;
-    top: 150px;
     left: 0;
     right: 0;
-    z-index: 1001;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  #topBtn {
+    height: 40px;
+    width: 40px;
+    display: block;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background: var(--gradient);
+    color: white;
+    cursor: pointer;
+    padding: 0px;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .profile-pic {
+    z-index: 1008;
+    border: 3px solid #fff;
+    left: 0;
+    right: 0;
     width: 150px;
     height: 150px;
     border-radius: 50%;

@@ -1,9 +1,3 @@
-window.addEventListener('resize', () => {
-  // We execute the same script as before
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
-
 window.onscroll = () => {
   progessBarOnScroll();
   scrollTopBtnHandle();
@@ -12,10 +6,7 @@ window.onscroll = () => {
 // Scroll to top button
 const scrollToTopBtn = document.getElementById('topBtn');
 
-const scrollTopBtnHandle = y => {
-  if (document.body.scrollTop === 0) {
-    scrollToTopBtn.style.display = 'none';
-  }
+const scrollTopBtnHandle = () => {
   document.body.scrollTop > 319 || document.documentElement.scrollTop > 319
     ? (scrollToTopBtn.style.display = 'block')
     : (scrollToTopBtn.style.display = 'none');
