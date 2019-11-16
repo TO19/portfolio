@@ -1,6 +1,13 @@
 :root {
   --main-color: #ff6961;
-  --gradient: linear-gradient(to left, #7b4397, #a1338a, #c01d73, #d40d55, #dc2430);
+  --gradient: linear-gradient(
+    to left,
+    #7b4397,
+    #a1338a,
+    #c01d73,
+    #d40d55,
+    #dc2430
+  );
 }
 
 @-ms-viewport {
@@ -10,7 +17,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 html {
   scroll-behavior: smooth;
@@ -30,7 +37,7 @@ a {
   margin: 0 auto;
   position: absolute;
   border: 3px solid #fff;
-  top: 13%;
+  top: 8%;
   left: 0;
   right: 0;
   z-index: 1001;
@@ -59,7 +66,14 @@ a {
 }
 
 #topBtn:hover {
-  background: linear-gradient(to right, #7b4397, #a1338a, #c01d73, #d40d55, #dc2430);
+  background: linear-gradient(
+    to right,
+    #7b4397,
+    #a1338a,
+    #c01d73,
+    #d40d55,
+    #dc2430
+  );
 }
 
 /* DESCRIPTION */
@@ -78,6 +92,7 @@ a {
 
 .name-profile {
   color: rgba(0, 0, 0, 0.7);
+  margin-top: 30px;
   font-size: 44px;
   font-weight: 700;
 }
