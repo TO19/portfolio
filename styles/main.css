@@ -1,13 +1,6 @@
 :root {
   --main-color: #ff6961;
-  --gradient: linear-gradient(
-    to left,
-    #7b4397,
-    #a1338a,
-    #c01d73,
-    #d40d55,
-    #dc2430
-  );
+  --gradient: linear-gradient(to right, #e53935, #e35d5b);
 }
 
 @-ms-viewport {
@@ -46,6 +39,14 @@ a {
   border-radius: 50%;
 }
 
+/* // Titles */
+
+.titles {
+  font-weight: 600;
+  color: #00000080;
+  margin-bottom: 2rem;
+}
+
 /* SCROLL TO TOP BUTTON */
 #topBtn {
   height: 60px;
@@ -66,14 +67,7 @@ a {
 }
 
 #topBtn:hover {
-  background: linear-gradient(
-    to right,
-    #7b4397,
-    #a1338a,
-    #c01d73,
-    #d40d55,
-    #dc2430
-  );
+  background: linear-gradient(to left, #e53935, #e35d5b);
 }
 
 /* DESCRIPTION */
@@ -105,7 +99,7 @@ a {
 }
 .typeWriter {
   display: flex;
-  color: rgba(0, 0, 0, 0.6);
+  color: #00000060;
   font-size: 30px;
 }
 
