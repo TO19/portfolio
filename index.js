@@ -1,6 +1,6 @@
 window.onscroll = () => {
   progessBarOnScroll();
-  scrollTopBtnHandle();
+  handleHeaderHide();
 };
 
 // Scroll to top button
@@ -28,6 +28,19 @@ const progessBarOnScroll = () => {
     document.documentElement.clientHeight;
   const scrolled = (winScroll / height) * 100;
   document.getElementById("progressBar").style.width = scrolled + "%";
+};
+
+// Handle hide/show header
+let prevScrollpos = window.pageYOffset;
+const handleHeaderHide = () => {
+  const currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("header").style.display = "block";
+  } else {
+    document.getElementById("header").style.display = "none";
+  }
+  prevScrollpos = currentScrollPos;
 };
 
 // Cube selection
