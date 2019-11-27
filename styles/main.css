@@ -124,17 +124,22 @@ a {
 }
 
 .about p {
+  text-align: justify;
   text-align-last: left;
   text-indent: 3em;
   line-height: 1.5;
-  color: #00000060;
+  color: #00000080;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  margin-left: 6rem;
-  margin-right: 6rem;
+  max-width: 800px;
 }
 
 @media screen and (max-width: 768px) {
+  .about p {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .profile-pic {
     z-index: 1008;
     border: 3px solid #fff;
