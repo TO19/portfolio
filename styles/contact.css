@@ -3,8 +3,6 @@
   justify-content: center;
   align-items: center;
 }
-.sub-contact {
-}
 .contact-ul {
   position: relative;
   margin: 0;
@@ -17,8 +15,12 @@
   list-style: none;
   width: 60px;
   height: 60px;
-  margin: 30px 40px;
-  transform: rotate(-30deg) skew(20deg);
+  margin-right: 30px;
+  /* transform: rotate(10deg) skew(10deg); */
+}
+
+.contact-ul > :last-child {
+  margin-right: 0px;
 }
 
 .contact-ul .contact-li span {
@@ -66,4 +68,8 @@
 }
 .contact-ul .contact-li:nth-child(2) span {
   background: var(--main-color);
+}
+
+.contact-ul .contact-li:nth-child(3) span {
+  background: #00000090;
 }

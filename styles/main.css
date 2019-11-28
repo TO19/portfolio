@@ -1,5 +1,5 @@
 :root {
-  --main-color: #ff6961;
+  --main-color: #e35d5b;
   --gradient: linear-gradient(to right, #e53935, #e35d5b);
 }
 
@@ -33,7 +33,7 @@ a {
   top: 8%;
   left: 0;
   right: 0;
-  z-index: 1001;
+  z-index: 1000;
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -112,6 +112,7 @@ a {
 }
 
 /* About */
+
 .about {
   display: flex;
   align-items: center;
@@ -171,6 +172,7 @@ a {
   .profile-pic {
     z-index: 1008;
     border: 3px solid #fff;
+    top: 12%;
     left: 0;
     right: 0;
     width: 150px;
@@ -194,4 +196,11 @@ a {
     border-radius: 50%;
     font-size: 18px;
   }
+}
+
+/* PFDFVIEW */
+
+.main-cv-view {
+  height: 100vh;
+  width: 100%;
 }
