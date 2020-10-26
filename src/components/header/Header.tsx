@@ -5,8 +5,10 @@ import Typography from "@material-ui/core/Typography";
 import { Switch } from "@material-ui/core";
 import { ThemeContext } from "../../providers/AppProviders";
 import { useStyles } from "../../shared/hooks/use-styles";
-
-const rocket = require("../../assets/rocket.svg");
+import RocketSVG from "../rocket-svg/RocketSVG";
+import useWindowPosition from "../../shared/hooks/use-window-position";
+import { headerFadeBP } from "../../shared/constants/scroll.const";
+import PageProgressBar from "../page-progress-bar/PageProgressBar";
 
 export default function Header(): ReactElement {
   const themeContext = useContext(ThemeContext);
@@ -15,15 +17,25 @@ export default function Header(): ReactElement {
     () => themeContext.handleThemeSwitch(),
     [themeContext]
   );
+  const windowPos = useWindowPosition();
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="sticky"
+      color={windowPos > headerFadeBP ? "primary" : "secondary"}
+      elevation={windowPos > headerFadeBP ? 0 : 4}
+      style={{
+        transition: "background 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+      }}
+    >
+      <PageProgressBar />
       <Toolbar>
-        <img src={rocket} alt="Application logo" width="60px" height="60px" />
         <Typography variant="h5" align="left" className={classes.headerTitle}>
+          <RocketSVG width="50px" height="50px" transform="rotate(90)" />
           {/* Phamton div */}
         </Typography>
         <Switch
+          color={windowPos > headerFadeBP ? "secondary" : "primary"}
           checked={themeContext.type === "dark"}
           onChange={onChangeSwitchTheme}
           size="small"
