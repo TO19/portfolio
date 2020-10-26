@@ -14,11 +14,11 @@ enum ProfileLinks {
   linkedIn = "https://www.linkedin.com/in/antonin-goix-560972180/",
   twitter = "https://twitter.com/AntoninGoix",
   etna = "https://etna.io/",
+  pdf = "../../assets/CV-ANTONIN-FIN-2020.pdf",
 }
 
 export default function SocialButtons() {
   const { theme } = useContext(ThemeContext);
-  console.log(theme);
 
   function goToLink(link: string): void {
     window.open(link, "_blank");
@@ -69,7 +69,7 @@ export default function SocialButtons() {
           }}
           aria-label="show cv"
           component="span"
-          onClick={() => goToLink(ProfileLinks.twitter)}
+          onClick={() => goToLink(ProfileLinks.pdf)}
         >
           <AccountBox style={{ fontSize: 40 }} />
         </IconButton>
