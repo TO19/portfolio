@@ -19,6 +19,17 @@ export const useTheme = (): UseThemeType => {
           main: mainSecondaryColor,
         },
       },
+      typography: {
+        fontFamily: [
+          "Montserrat",
+          '"Helvetica Neue"',
+          "Arial",
+          "sans-serif",
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+        ].join(","),
+      },
     });
   }, [type]);
 

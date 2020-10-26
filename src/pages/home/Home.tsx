@@ -1,17 +1,60 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "../../components/header/Header";
+import { Box, Container } from "@material-ui/core";
+import Console from "../../components/console/Console";
+import SectionTitle from "../../components/section-title/SectionTitle";
+import TypeWriter from "../../components/typewriter/TypeWriter";
+import profilePicture from "../../assets/etna-profile.jpeg";
+import "./home.scss";
+import SocialButtons from "../../components/social-buttons/SocialButtons";
+import ProjectList from "../../components/project-list/ProjectList";
+import { ThemeContext } from "../../providers/AppProviders";
 
 export default function Home() {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <>
       <Header />
-      <div
-        style={{
-          height: "9000px",
-        }}
-      >
-        Home componasdasdasdent
-      </div>
+      <Container maxWidth="sm">
+        <SectionTitle title="Antonin GOIX" />
+        <Box
+          component="div"
+          flexDirection="column"
+          display="flex"
+          style={{
+            margin: "0 0 3rem 0",
+          }}
+        >
+          <img
+            src={profilePicture}
+            className="profile-picture"
+            alt="Profile"
+            width="200"
+            height="240"
+            style={{
+              border: `3px solid ${theme.palette.secondary.main}`,
+            }}
+          />
+          <TypeWriter
+            typingDelay={150}
+            erasingDelay={50}
+            newTextDelay={2000}
+            textArray={[
+              "Passionné de tech",
+              "Développeur",
+              "Étudiant Master 1",
+              "Architecte",
+            ]}
+            loop={true}
+          />
+          <SocialButtons />
+        </Box>
+        <SectionTitle title="Mes compétences" />
+        <Console />
+        <SectionTitle title="Mes projets" />
+        <ProjectList />
+      </Container>
     </>
   );
 }

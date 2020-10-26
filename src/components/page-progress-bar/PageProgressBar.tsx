@@ -5,7 +5,7 @@ import { ThemeContext } from "../../providers/AppProviders";
 export default function PageProgressBar(): JSX.Element {
   const [scroll, setScroll] = useState<string>("0");
   const { theme } = useContext(ThemeContext);
-
+  
   useEffect(() => {
     function progressBarHandler() {
       const totalScroll = document.documentElement.scrollTop;

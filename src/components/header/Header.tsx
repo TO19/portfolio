@@ -22,7 +22,7 @@ export default function Header(): ReactElement {
   return (
     <AppBar
       position="sticky"
-      color={windowPos > headerFadeBP ? "primary" : "secondary"}
+      color={windowPos > headerFadeBP ? "transparent" : "secondary"}
       elevation={windowPos > headerFadeBP ? 0 : 4}
       style={{
         transition: "background 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
