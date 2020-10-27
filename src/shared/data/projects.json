@@ -1,0 +1,67 @@
+export const projectList = [
+  {
+    img: profilePic,
+    title: "Image",
+    author: "author",
+  },
+  {
+    img: profilePic,
+    title: "Image",
+    author: "author",
+  },
+  {
+    img: profilePic,
+    title: "Image",
+    author: "author",
+  },
+  {
+    img: profilePic,
+    title: "Image",
+    author: "author",
+  },
+  {
+    img: profilePic,
+    title: "Image",
+    author: "author",
+  },
+  {
+    img: profilePic,
+    title: "Image",
+    author: "author",
+  },
+  {
+    img: profilePic,
+    title: "Image",
+    author: "author",
+  },
+  {
+    img: profilePic,
+    title: "Image",
+    author: "author",
+  },
+  {
+    img: profilePic,
+    title: "Image",
+    author: "author",
+  },
+  {
+    img: profilePic,
+    title: "Image",
+    author: "author",
+  },
+  {
+    img: profilePic,
+    title: "Image",
+    author: "author",
+  },
+  {
+    img: profilePic,
+    title: "Image",
+    author: "author",
+  },
+  {
+    img: profilePic,
+    title: "Image",
+    author: "author",
+  },
+];
