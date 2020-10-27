@@ -8,6 +8,7 @@ import {
   Twitter,
 } from "@material-ui/icons";
 import { ThemeContext } from "../../providers/AppProviders";
+import { useHistory } from "react-router-dom";
 
 enum ProfileLinks {
   github = "https://github.com/TO19",
@@ -19,11 +20,17 @@ enum ProfileLinks {
 
 export default function SocialButtons() {
   const { theme } = useContext(ThemeContext);
+  const history = useHistory();
 
   function goToLink(link: string): void {
     window.open(link, "_blank");
   }
 
+  function goToCV(): void {
+    history.push("/cv");
+  }
+  // TODO: Refactor icons into a smaller component props: color, link, label,
+  // title, icon
   return (
     <Box alignSelf="center">
       <Tooltip title="Ouvrir mon profile LinkedIn">
@@ -69,7 +76,7 @@ export default function SocialButtons() {
           }}
           aria-label="show cv"
           component="span"
-          onClick={() => goToLink(ProfileLinks.pdf)}
+          onClick={goToCV}
         >
           <AccountBox style={{ fontSize: 40 }} />
         </IconButton>

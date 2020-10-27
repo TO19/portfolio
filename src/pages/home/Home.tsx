@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, ReactElement } from "react";
 import Header from "../../components/header/Header";
 import { Box, Container } from "@material-ui/core";
 import Console from "../../components/console/Console";
@@ -10,22 +10,15 @@ import SocialButtons from "../../components/social-buttons/SocialButtons";
 import ProjectList from "../../components/project-list/ProjectList";
 import { ThemeContext } from "../../providers/AppProviders";
 
-export default function Home() {
+export default function Home(): ReactElement {
   const { theme } = useContext(ThemeContext);
 
   return (
     <>
       <Header />
-      <Container maxWidth="sm">
+      <Container maxWidth="md">
         <SectionTitle title="Antonin GOIX" />
-        <Box
-          component="div"
-          flexDirection="column"
-          display="flex"
-          style={{
-            margin: "0 0 3rem 0",
-          }}
-        >
+        <Box component="div" flexDirection="column" display="flex">
           <img
             src={profilePicture}
             className="profile-picture"
