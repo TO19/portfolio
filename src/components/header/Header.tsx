@@ -20,29 +20,31 @@ export default function Header(): ReactElement {
   const windowPos = useWindowPosition();
 
   return (
-    <AppBar
-      position="sticky"
-      color={windowPos > headerFadeBP ? "transparent" : "secondary"}
-      elevation={windowPos > headerFadeBP ? 0 : 4}
-      style={{
-        transition: "background 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-      }}
-    >
-      <PageProgressBar />
-      <Toolbar>
-        <Typography variant="h5" align="left" className={classes.headerTitle}>
-          <RocketSVG width="50px" height="50px" transform="rotate(90)" />
-          {/* Phamton div */}
-        </Typography>
-        <Switch
-          color={windowPos > headerFadeBP ? "secondary" : "primary"}
-          checked={themeContext.type === "dark"}
-          onChange={onChangeSwitchTheme}
-          size="small"
-          name="ThemeToggle"
-          inputProps={{ "aria-label": "theme toggle checkbox" }}
-        />
-      </Toolbar>
-    </AppBar>
+    <>
+      <RocketSVG width="50px" height="50px" />
+      <AppBar
+        position="sticky"
+        color={windowPos > headerFadeBP ? "transparent" : "secondary"}
+        elevation={windowPos > headerFadeBP ? 0 : 4}
+        style={{
+          transition: "background 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+        }}
+      >
+        <PageProgressBar />
+        <Toolbar>
+          <Typography variant="h5" align="left" className={classes.headerTitle}>
+            {/* Phamton */}
+          </Typography>
+          <Switch
+            color={windowPos > headerFadeBP ? "secondary" : "primary"}
+            checked={themeContext.type === "dark"}
+            onChange={onChangeSwitchTheme}
+            size="small"
+            name="ThemeToggle"
+            inputProps={{ "aria-label": "theme toggle checkbox" }}
+          />
+        </Toolbar>
+      </AppBar>
+    </>
   );
 }

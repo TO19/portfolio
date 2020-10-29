@@ -3,15 +3,21 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import CVViewer from "./pages/cv/CVViewer";
 import Home from "./pages/home/Home";
 import { rocketAscii } from "./shared/constants/misc.const";
+import RocketSVG from "./components/rocket-svg/RocketSVG";
+import PageProgressBar from "./components/page-progress-bar/PageProgressBar";
 
 export default function App() {
   useEffect(() => console.log(rocketAscii), []);
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/cv" component={CVViewer}/>
-      </Switch>
-    </BrowserRouter>
+    <>
+      <RocketSVG width="50px" height="50px" />
+      <PageProgressBar />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/cv" component={CVViewer} />
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 }
