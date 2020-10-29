@@ -1,22 +1,63 @@
-import { Modal } from "@material-ui/core";
+import {
+  Popover,
+  Typography,
+  makeStyles,
+  createStyles,
+} from "@material-ui/core";
 import React, { ReactElement } from "react";
+import { Project } from "../../shared/data/projects";
 
 export interface ProjectDetailModalProps {
-  handleToggle: () => void;
+  project: Project;
   isOpen: boolean;
+  toggle: () => void;
+  linkedElId: string;
+  anchorEl: any;
 }
+
+const useStylesModal = makeStyles(() =>
+  createStyles({
+    content: {
+      padding: "1rem",
+      maxWidth: "400px",
+      alignSelf: "center",
+      justifyContent: "center",
+      flexDirection: "column",
+      alignItems: "center",
+    },
+    root: {
+      display: "flex",
+    },
+  })
+);
 
 export default function ProjectDetailModal(
   props: ProjectDetailModalProps
-): ReactElement | null {
+): ReactElement {
+  const { isOpen, toggle, project, anchorEl, linkedElId } = props;
+  const classes = useStylesModal();
   return (
-    <Modal
-      open={props.isOpen}
-      onClose={props.handleToggle}
-      aria-labelledby="simple-modal-title"
-      aria-describedby="simple-modal-description"
+    <Popover
+      id={linkedElId}
+      open={isOpen}
+      anchorEl={anchorEl}
+      onClose={toggle}
+      anchorOrigin={{
+        vertical: "bottom",
+        horizontal: "center",
+      }}
+      transformOrigin={{
+        vertical: "bottom",
+        horizontal: "center",
+      }}
     >
-      <p> DSDfSDFSDFSDFSDFSDF</p>
-    </Modal>
+      <div className={classes.content}>
+        <Typography variant="h6"> {project.name}</Typography>
+        <p>{project.description}</p>
+        {project.links ? (
+          <a href={project.links[0]}>Lien vers le store android</a>
+        ) : null}
+      </div>
+    </Popover>
   );
 }
