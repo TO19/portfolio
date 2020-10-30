@@ -12,7 +12,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function Header(): ReactElement {
   const themeContext = useContext(ThemeContext);
-  const matches = useMediaQuery("(max-width:600px)");
+  const matches = useMediaQuery("(max-width:1131px)");
   const classes = useStyles();
   const windowPos = useWindowPosition();
   const onChangeSwitchTheme = useCallback(
@@ -29,7 +29,7 @@ export default function Header(): ReactElement {
           transition: "background 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
         }}
       >
-        {windowPos <= 80 && matches ? (
+        {!matches || (matches && windowPos <= 0) ? (
           <Toolbar>
             <Typography
               variant="h5"
