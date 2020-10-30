@@ -1,0 +1,19 @@
+#progress-bar-container {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+#progress-bar {
+  transform-origin: top left;
+  transform: scale(0, 0);
+  opacity: 0;
+}
+
+#progress-bar-container,
+#progress-bar {
+  height: 3px;
+}
+
