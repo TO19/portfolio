@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 export default function useScrollPosition() {
   const [scroll, setScroll] = useState<number>(0);
   function getDocHeight(): number {
@@ -11,25 +12,18 @@ export default function useScrollPosition() {
       document.documentElement.clientHeight
     );
   }
-  function getPercentageScroll() {
+  function getPercentageScroll(): void {
     const scrollTop = window.pageYOffset;
     const winHeight = window.innerHeight;
     const docHeight = getDocHeight();
 
     const totalDocScrollLength = docHeight - winHeight;
-    const scrollPostion = (scrollTop / totalDocScrollLength) * 100;
-    console.log(scrollPostion);
+    const scrollPostion = scrollTop / totalDocScrollLength;
     setScroll(scrollPostion);
   }
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      getPercentageScroll();
-    });
-
-    return () =>
-      window.removeEventListener("scroll", () => {
-        getPercentageScroll();
-      });
+    window.addEventListener("scroll", getPercentageScroll, { passive: true });
+    return () => window.removeEventListener("scroll", getPercentageScroll);
   });
   return scroll;
 }

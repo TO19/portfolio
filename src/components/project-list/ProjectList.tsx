@@ -8,6 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import InfoIcon from "@material-ui/icons/Info";
 import ProjectDetailModal from "../project-detail-modal/ProjectDetailModal";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStylesGrid = makeStyles(() =>
   createStyles({
@@ -28,6 +29,7 @@ const useStylesGrid = makeStyles(() =>
 
 export default function ProjectList(): ReactElement {
   const classes = useStylesGrid();
+  const matches = useMediaQuery("(max-width:600px)");
   const [isPopoverOpen, setIsPopoverOpen] = useState<boolean>(false);
   const [projectId, setProjectId] = useState<number>(0);
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -40,7 +42,7 @@ export default function ProjectList(): ReactElement {
     <div className={classes.root}>
       <GridList cellHeight={300} spacing={40} className={classes.gridList}>
         {list.map((project: Project, index: number) => (
-          <GridListTile key={project.name}>
+          <GridListTile cols={matches ? 2 : 1} key={project.name}>
             <img src={project.img} alt={project.name} />
             <GridListTileBar
               title={project.name}

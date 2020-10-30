@@ -5,23 +5,22 @@ import Typography from "@material-ui/core/Typography";
 import { Switch } from "@material-ui/core";
 import { ThemeContext } from "../../providers/AppProviders";
 import { useStyles } from "../../shared/hooks/use-styles";
-import RocketSVG from "../rocket-svg/RocketSVG";
 import useWindowPosition from "../../shared/hooks/use-window-position";
 import { headerFadeBP } from "../../shared/constants/scroll.const";
-import PageProgressBar from "../page-progress-bar/PageProgressBar";
+import RocketSVG from "../rocket-svg/RocketSVG";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 export default function Header(): ReactElement {
   const themeContext = useContext(ThemeContext);
+  const matches = useMediaQuery("(max-width:600px)");
   const classes = useStyles();
+  const windowPos = useWindowPosition();
   const onChangeSwitchTheme = useCallback(
     () => themeContext.handleThemeSwitch(),
     [themeContext]
   );
-  const windowPos = useWindowPosition();
-
   return (
     <>
-      <RocketSVG width="50px" height="50px" />
       <AppBar
         position="sticky"
         color={windowPos > headerFadeBP ? "transparent" : "secondary"}
@@ -30,20 +29,26 @@ export default function Header(): ReactElement {
           transition: "background 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
         }}
       >
-        <PageProgressBar />
-        <Toolbar>
-          <Typography variant="h5" align="left" className={classes.headerTitle}>
-            {/* Phamton */}
-          </Typography>
-          <Switch
-            color={windowPos > headerFadeBP ? "secondary" : "primary"}
-            checked={themeContext.type === "dark"}
-            onChange={onChangeSwitchTheme}
-            size="small"
-            name="ThemeToggle"
-            inputProps={{ "aria-label": "theme toggle checkbox" }}
-          />
-        </Toolbar>
+        {windowPos <= 80 && matches ? (
+          <Toolbar>
+            <Typography
+              variant="h5"
+              align="left"
+              className={classes.headerTitle}
+            >
+              <RocketSVG width="50px" height="50px" />
+              {/* Phamton */}
+            </Typography>
+            <Switch
+              color={windowPos > headerFadeBP ? "secondary" : "primary"}
+              checked={themeContext.type === "dark"}
+              onChange={onChangeSwitchTheme}
+              size="small"
+              name="ThemeToggle"
+              inputProps={{ "aria-label": "theme toggle checkbox" }}
+            />
+          </Toolbar>
+        ) : null}
       </AppBar>
     </>
   );

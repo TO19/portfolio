@@ -11,10 +11,9 @@ export default function PageProgressBar(): JSX.Element {
       <div
         id="progress-bar"
         style={{
-          transform: `scale(1, ${scroll / 100})`,
-          opacity: `${scroll / 100}`,
+          transform: `scale(${scroll}, 1)`,
+          opacity: `${scroll}`,
           background: theme.palette.secondary.main,
-          transition: "transform 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
         }}
       />
     </div>
