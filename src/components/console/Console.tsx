@@ -98,8 +98,6 @@ function Console(): ReactElement {
                 <br />
                 analysis: 8,
                 <br />
-                openMinded: 8,
-                <br />
                 organization: 7,
                 <br />
                 humor: 7,

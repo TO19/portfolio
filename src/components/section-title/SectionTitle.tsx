@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
+import "./section-title.scss";
 
 interface SectionTitleProps {
   title: string;
@@ -7,14 +8,20 @@ interface SectionTitleProps {
 
 export default function SectionTitle(props: SectionTitleProps) {
   return (
-    <Typography
-      variant="h4"
-      style={{
-        padding: "2rem 0 2rem 0",
-        textAlign: "center",
-      }}
-    >
-      {props.title}
-    </Typography>
+    <div className="container">
+      <div className="border" />
+      <span className="content">
+        <Typography
+          variant="h4"
+          style={{
+            width: "max-content",
+            textAlign: "center",
+          }}
+        >
+          {props.title}
+        </Typography>
+      </span>
+      <div className="border" />
+    </div>
   );
 }

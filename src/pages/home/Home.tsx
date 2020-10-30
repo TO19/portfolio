@@ -1,14 +1,14 @@
-import React, { useContext, ReactElement } from "react";
-import Header from "../../components/header/Header";
-import { Box, Container } from "@material-ui/core";
-import Console from "../../components/console/Console";
-import SectionTitle from "../../components/section-title/SectionTitle";
-import TypeWriter from "../../components/typewriter/TypeWriter";
+import { Box, Container, Typography } from "@material-ui/core";
+import React, { ReactElement, useContext } from "react";
 import profilePicture from "../../assets/etna-profile.jpeg";
-import "./home.scss";
-import SocialButtons from "../../components/social-buttons/SocialButtons";
+import Console from "../../components/console/Console";
+import Header from "../../components/header/Header";
 import ProjectList from "../../components/project-list/ProjectList";
+import SectionTitle from "../../components/section-title/SectionTitle";
+import SocialButtons from "../../components/social-buttons/SocialButtons";
+import TypeWriter from "../../components/typewriter/TypeWriter";
 import { ThemeContext } from "../../providers/AppProviders";
+import "./home.scss";
 
 export default function Home(): ReactElement {
   const { theme } = useContext(ThemeContext);
@@ -42,6 +42,19 @@ export default function Home(): ReactElement {
             loop={true}
           />
           <SocialButtons />
+          <Typography
+            variant="body1"
+            style={{ margin: "1rem 0 0 0", textAlign: "center" }}
+          >
+            Passioné d'informatique depuis le plus jeune age, je suis
+            actuellement en Master 1 à l'ETNA. Grâce à ma formation et ma
+            curiosité je connais les bases pas mal de technologies et langages
+            en partant du C jusqu'aux langages haut niveau. Vous trouverai sur
+            ce portfolio une petite partie de mes projets ainsi que toutes mes
+            compétences actuelles. Vous pouvez aussi en cliquant sur les icons
+            plus haut naviguer entre mes différents réseaux, télécharger mon CV
+            ou voir le site de mon école.
+          </Typography>
         </Box>
         <SectionTitle title="Mes compétences" />
         <Console />

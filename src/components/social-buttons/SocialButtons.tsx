@@ -8,7 +8,7 @@ import {
   Twitter,
 } from "@material-ui/icons";
 import { ThemeContext } from "../../providers/AppProviders";
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 enum ProfileLinks {
   github = "https://github.com/TO19",
@@ -20,15 +20,11 @@ enum ProfileLinks {
 
 export default function SocialButtons() {
   const { theme } = useContext(ThemeContext);
-  const history = useHistory();
 
   function goToLink(link: string): void {
     window.open(link, "_blank");
   }
 
-  function goToCV(): void {
-    history.push("/cv");
-  }
   // TODO: Refactor icons into a smaller component props: color, link, label,
   // title, icon
   return (
@@ -69,17 +65,19 @@ export default function SocialButtons() {
           <Twitter style={{ fontSize: 40 }} />
         </IconButton>
       </Tooltip>
-      <Tooltip title="Ouvrir mon CV">
-        <IconButton
-          style={{
-            color: theme.palette.secondary.main,
-          }}
-          aria-label="show cv"
-          component="span"
-          onClick={goToCV}
-        >
-          <AccountBox style={{ fontSize: 40 }} />
-        </IconButton>
+      <Tooltip title="Télécharger mon CV">
+        <Link to={ProfileLinks.pdf} target="_blank" download>
+          <IconButton
+            style={{
+              color: theme.palette.secondary.main,
+            }}
+            aria-label="show cv"
+            component="span"
+            //onClick={goToCV}
+          >
+            <AccountBox style={{ fontSize: 40 }} />
+          </IconButton>
+        </Link>
       </Tooltip>
       <Tooltip title="Aller sur le site de mon école">
         <IconButton

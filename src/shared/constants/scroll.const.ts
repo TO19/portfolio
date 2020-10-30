@@ -1,1 +1,1 @@
-export const headerFadeBP = 180;
+export const headerFadeBP = 100;
