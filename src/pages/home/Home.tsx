@@ -38,7 +38,7 @@ export default function Home(): ReactElement {
               "Développeur",
               "Fullstack",
               "Étudiant Master 1",
-              "Architecte logicie",
+              "Architecte logiciel",
             ]}
             loop={true}
           />
@@ -47,7 +47,7 @@ export default function Home(): ReactElement {
             variant="body1"
             style={{ margin: "1rem 0 0 0", textAlign: "center", color: "red" }}
           >
-            Actuellement en recherche de nouveaux challenges pour mon master a
+            Actuellement en recherche de nouveaux challenges pour mon master à
             l'ETNA sur un contrat d'apprentissage de 2 ans.
           </Typography>
           <Typography variant="body1" style={{ textAlign: "center" }}>
