@@ -36,22 +36,27 @@ export default function Home(): ReactElement {
             textArray={[
               "Passionné de tech",
               "Développeur",
+              "Fullstack",
               "Étudiant Master 1",
-              "Architecte",
+              "Architecte logicie",
             ]}
             loop={true}
           />
           <SocialButtons />
           <Typography
             variant="body1"
-            style={{ margin: "1rem 0 0 0", textAlign: "center" }}
+            style={{ margin: "1rem 0 0 0", textAlign: "center", color: "red" }}
           >
-            Passioné d'informatique depuis le plus jeune age, je suis
+            Actuellement en recherche de nouveaux challenges pour mon master a
+            l'ETNA sur un contrat d'apprentissage de 2 ans.
+          </Typography>
+          <Typography variant="body1" style={{ textAlign: "center" }}>
+            Passionné d'informatique depuis le plus jeune age, je suis
             actuellement en Master 1 à l'ETNA. Grâce à ma formation et ma
-            curiosité je connais les bases pas mal de technologies et langages
-            en partant du C jusqu'aux langages haut niveau. Vous trouverai sur
+            curiosité je connais les bases de pas mal de technologies et langages
+            en partant du C jusqu'aux langages haut niveau. Vous trouverez sur
             ce portfolio une petite partie de mes projets ainsi que toutes mes
-            compétences actuelles. Vous pouvez aussi en cliquant sur les icons
+            compétences actuelles. Vous pouvez aussi, en cliquant sur les icones
             plus haut naviguer entre mes différents réseaux, télécharger mon CV
             ou voir le site de mon école.
           </Typography>

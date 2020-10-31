@@ -37,7 +37,7 @@ export default function Header(): ReactElement {
               className={classes.headerTitle}
             >
               <RocketSVG width="50px" height="50px" />
-              {/* Phamton */}
+              {/* Phamtom */}
             </Typography>
             <Switch
               color={windowPos > headerFadeBP ? "secondary" : "primary"}
