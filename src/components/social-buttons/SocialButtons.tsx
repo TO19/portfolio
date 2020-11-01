@@ -15,7 +15,7 @@ enum ProfileLinks {
   linkedIn = "https://www.linkedin.com/in/antonin-goix-560972180/",
   twitter = "https://twitter.com/AntoninGoix",
   etna = "https://etna.io/",
-  pdf = "../../assets/CV-ANTONIN-FIN-2020.pdf",
+  pdf = "../../assets/CV-ANTONIN.pdf",
 }
 
 export default function SocialButtons() {
@@ -34,7 +34,7 @@ export default function SocialButtons() {
           style={{
             color: "#0077B5",
           }}
-          aria-label="go to linked profile"
+          aria-label="go to linked profil"
           component="span"
           onClick={() => goToLink(ProfileLinks.linkedIn)}
         >
@@ -46,7 +46,7 @@ export default function SocialButtons() {
           style={{
             color: theme.palette.secondary.main,
           }}
-          aria-label="go to github profile"
+          aria-label="go to github profil"
           component="span"
           onClick={() => goToLink(ProfileLinks.github)}
         >
@@ -58,7 +58,7 @@ export default function SocialButtons() {
           style={{
             color: "#55ACEE",
           }}
-          aria-label="go to twitter profile"
+          aria-label="go to twitter profil"
           component="span"
           onClick={() => goToLink(ProfileLinks.twitter)}
         >
