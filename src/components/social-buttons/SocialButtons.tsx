@@ -15,7 +15,6 @@ enum ProfileLinks {
   linkedIn = "https://www.linkedin.com/in/antonin-goix-560972180/",
   twitter = "https://twitter.com/AntoninGoix",
   etna = "https://etna.io/",
-  pdf = "../../assets/CV-ANTONIN.pdf",
 }
 
 export default function SocialButtons() {
@@ -66,7 +65,7 @@ export default function SocialButtons() {
         </IconButton>
       </Tooltip>
       <Tooltip title="Télécharger mon CV">
-        <Link to={ProfileLinks.pdf} target="_blank" download>
+        <Link to={process.env.PUBLIC_URL + '/CV-ANTONIN.pdf'} target="_blank" download>
           <IconButton
             style={{
               color: theme.palette.secondary.main,
