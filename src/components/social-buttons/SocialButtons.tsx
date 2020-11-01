@@ -28,36 +28,36 @@ export default function SocialButtons() {
   // title, icon
   return (
     <Box alignSelf="center">
-      <Tooltip title="Ouvrir mon profile LinkedIn">
+      <Tooltip title="Ouvrir mon profil LinkedIn">
         <IconButton
           style={{
             color: "#0077B5",
           }}
-          aria-label="go to linked profil"
+          aria-label="go to linked profile"
           component="span"
           onClick={() => goToLink(ProfileLinks.linkedIn)}
         >
           <LinkedIn style={{ fontSize: 40 }} />
         </IconButton>
       </Tooltip>
-      <Tooltip title="Ouvrir mon profile Github">
+      <Tooltip title="Ouvrir mon profil Github">
         <IconButton
           style={{
             color: theme.palette.secondary.main,
           }}
-          aria-label="go to github profil"
+          aria-label="go to github profile"
           component="span"
           onClick={() => goToLink(ProfileLinks.github)}
         >
           <GitHub style={{ fontSize: 40 }} />
         </IconButton>
       </Tooltip>
-      <Tooltip title="Ouvrir mon profile Twitter">
+      <Tooltip title="Ouvrir mon profil Twitter">
         <IconButton
           style={{
             color: "#55ACEE",
           }}
-          aria-label="go to twitter profil"
+          aria-label="go to twitter profile"
           component="span"
           onClick={() => goToLink(ProfileLinks.twitter)}
         >
